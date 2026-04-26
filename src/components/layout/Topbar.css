@@ -1,68 +1,82 @@
 .topbar {
-  height: 60px;
-  background: var(--bg-card);
-  border-bottom: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  padding: 0 24px;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  height: 60px;
+  background: #FFFFFF;
+  border-bottom: 1px solid #D6DBDE;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
   z-index: 100;
 }
 
 .topbar-logo {
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--text-primary);
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
 .topbar-logo svg {
-  width: 24px;
-  height: 24px;
-  color: var(--primary);
+  width: 40px;
+  height: 40px;
+  color: #1664FF;
+}
+
+.topbar-logo span {
+  font-size: 16px;
+  font-weight: 600;
+  color: #242424;
 }
 
 .topbar-nav {
   display: flex;
-  gap: 24px;
+  align-items: stretch;
+  height: 60px;
   margin-left: 32px;
 }
 
 .topbar-nav a {
-  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  color: #242424;
   text-decoration: none;
   font-size: 14px;
-  padding: 8px 0;
-  border-bottom: 2px solid transparent;
   transition: all 0.2s;
+  border-bottom: 2px solid transparent;
 }
 
-.topbar-nav a:hover,
+.topbar-nav a:hover {
+  color: #1664FF;
+}
+
 .topbar-nav a.active {
-  color: var(--primary);
-  border-bottom-color: var(--primary);
+  color: #1664FF;
+  border-bottom-color: #1664FF;
 }
 
 .topbar-user {
   margin-left: auto;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
 }
 
-.topbar-user .avatar {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: var(--primary);
-  color: white;
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: #EBEDEF;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+}
+
+.avatar-text {
   font-size: 14px;
+  font-weight: 500;
+  color: #242424;
 }

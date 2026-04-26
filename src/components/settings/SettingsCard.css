@@ -1,33 +1,27 @@
 .settings-card {
-  background: var(--bg-card);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border);
-  margin-bottom: 24px;
+  background: #FFFFFF;
+  border-radius: 12px;
   overflow: hidden;
 }
 
 .settings-card-header {
-  padding: 16px 20px;
-  border-bottom: 1px solid var(--border);
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .settings-card-title {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
-  color: var(--text-primary);
+  color: #242424;
 }
 
 .settings-card-body {
-  padding: 20px;
+  padding: 0;
 }
 
 .settings-actions {
   display: flex;
   gap: 12px;
-  padding: 16px 20px;
-  border-top: 1px solid var(--border);
-  background: var(--bg-hover);
 }

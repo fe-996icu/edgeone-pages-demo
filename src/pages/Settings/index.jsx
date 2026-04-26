@@ -1,4 +1,3 @@
-import { Topbar, Sidebar } from '../../components/layout'
 import { GeneralSettings } from './GeneralSettings'
 import { TopbarSettings } from './TopbarSettings'
 import { SidebarSettings } from './SidebarSettings'
@@ -11,25 +10,16 @@ import './SettingsPage.css'
 
 export function SettingsPage() {
   return (
-    <div className="settings-page">
-      <Topbar />
-      <Sidebar />
-      <main className="main-content">
-        <div className="settings-content">
-          <div className="settings-tabs">
-            <div className="settings-tab active">运营设置</div>
-          </div>
-
-          <GeneralSettings />
-          <TopbarSettings />
-          <SidebarSettings />
-          <FilterSettings />
-          <LogSettings />
-          <MonitorSettings />
-          <QuotaSettings />
-          <CheckinSettings />
-        </div>
-      </main>
+    <div className="settings-page-tabs">
+      <div className="settings-tab-item">运营设置</div>
+      <GeneralSettings />
+      <TopbarSettings />
+      <SidebarSettings />
+      <FilterSettings />
+      <LogSettings />
+      <MonitorSettings />
+      <QuotaSettings />
+      <CheckinSettings />
     </div>
   )
 }
