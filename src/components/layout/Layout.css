@@ -12,6 +12,7 @@
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
+  transition: margin-left 0.3s ease;
 }
 
 .main-content.no-sidebar {
@@ -22,4 +23,34 @@
 .settings-content {
   max-width: 1648px;
   margin: 0 auto;
+}
+
+/* Responsive styles for tablet */
+@media (max-width: 1024px) {
+  .main-content {
+    margin-left: 0;
+    padding: 84px 32px 32px;
+  }
+
+  .main-content.no-sidebar {
+    margin-left: 0;
+    padding: 84px 32px 32px;
+  }
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    padding: 76px 16px 24px;
+  }
+
+  .main-content.no-sidebar {
+    margin-left: 0;
+    padding: 76px 16px 24px;
+  }
+
+  .settings-content {
+    max-width: 100%;
+  }
 }

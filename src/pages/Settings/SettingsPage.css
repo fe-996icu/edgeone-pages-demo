@@ -79,3 +79,19 @@
   color: #8F95A3;
   margin-top: 4px;
 }
+
+@media (max-width: 768px) {
+  .settings-card {
+    padding: 16px 8px;
+  }
+
+  .settings-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .settings-input-group {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

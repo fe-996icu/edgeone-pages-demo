@@ -1,5 +1,5 @@
 import { NavLink, useLocation } from 'react-router-dom'
-import { IconChart, IconKey, IconFileText, IconImage, IconWallet, IconUser, IconGrid, IconBook, IconInfo, IconFilter, IconLog, IconMonitor, IconTicket, IconSettings, IconChannel, IconModel, IconDeploy, IconUsers, IconChat, IconEmbed, IconCollapseLeft, IconCollapseRight } from '../icons'
+import { IconChart, IconKey, IconFileText, IconImage, IconWallet, IconUser, IconGrid, IconBook, IconInfo, IconFilter, IconLog, IconMonitor, IconTicket, IconSettings, IconChannel, IconModel, IconDeploy, IconUsers, IconChat, IconEmbed, IconSidebarCollapse, IconClose } from '../icons'
 import './Sidebar.css'
 
 // Define menus for each section
@@ -51,38 +51,53 @@ function getSectionFromPath(pathname) {
   if (pathname.startsWith('/dashboard')) return 'dashboard'
   if (pathname.startsWith('/model-square')) return 'model-square'
   if (pathname.startsWith('/docs')) return 'docs'
-  return null // home and about pages have no sidebar
+  return null
 }
 
-export function Sidebar({ collapsed, onToggle }) {
+export function Sidebar({ collapsed, onToggle, mobileOpen }) {
   const location = useLocation()
   const section = getSectionFromPath(location.pathname)
   const menuItems = section ? (menusBySection[section] || []) : []
 
-  // Don't render sidebar for pages without sidebar
   if (!section) {
     return null
   }
 
   return (
-    <aside className={`sidebar ${collapsed ? 'collapsed' : ''}`}>
-      <ul className="sidebar-menu">
-        {menuItems.map((item) => (
-          <li key={item.to}>
-            <NavLink
-              to={item.to}
-              className={({ isActive }) => `sidebar-item ${isActive ? 'active' : ''}`}
-              end={item.end}
-            >
-              <item.icon />
-              {!collapsed && <span>{item.label}</span>}
-            </NavLink>
-          </li>
-        ))}
-      </ul>
-      <div className="sidebar-toggle" onClick={onToggle}>
-        {collapsed ? <IconCollapseRight /> : <IconCollapseLeft />}
-      </div>
-    </aside>
+    <>
+      <aside className={`sidebar ${collapsed ? 'collapsed' : ''} ${mobileOpen ? 'mobile-open' : ''}`}>
+        <div className="sidebar-header">
+          <button className="sidebar-close" onClick={onToggle} aria-label="Close sidebar">
+            <IconClose />
+          </button>
+        </div>
+        <ul className="sidebar-menu">
+          {menuItems.map((item) => (
+            <li key={item.to}>
+              <NavLink
+                to={item.to}
+                className={({ isActive }) => `sidebar-item ${isActive ? 'active' : ''}`}
+                end={item.end}
+                onClick={() => {
+                  if (window.innerWidth <= 1024) {
+                    onToggle()
+                  }
+                }}
+              >
+                <item.icon />
+                {!collapsed && <span>{item.label}</span>}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+        <div className="sidebar-footer">
+          <button className="sidebar-toggle" onClick={onToggle} aria-label="Toggle sidebar">
+            <IconSidebarCollapse />
+            {!collapsed && <span>收起侧边栏</span>}
+          </button>
+        </div>
+      </aside>
+      {mobileOpen && <div className="sidebar-overlay active" onClick={onToggle} />}
+    </>
   )
 }

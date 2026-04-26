@@ -87,3 +87,9 @@
 .model-card .model-btn:hover {
   background: var(--primary-hover);
 }
+
+@media (max-width: 768px) {
+  .models-grid {
+    grid-template-columns: 1fr;
+  }
+}
