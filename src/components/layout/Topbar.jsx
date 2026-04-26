@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { IconDashboard } from '../icons'
 import './Topbar.css'
@@ -12,8 +11,6 @@ const navItems = [
 ]
 
 export function Topbar() {
-  const [showUserMenu, setShowUserMenu] = useState(false)
-
   return (
     <header className="topbar">
       <div className="topbar-logo">
@@ -33,51 +30,21 @@ export function Topbar() {
         ))}
       </nav>
       <div className="topbar-user">
-        <div
-          style={{ position: 'relative' }}
-          onMouseEnter={() => setShowUserMenu(true)}
-          onMouseLeave={() => setShowUserMenu(false)}
-        >
+        <div className="user-menu-wrapper">
           <div className="user-avatar" style={{ cursor: 'pointer' }}>
             <span className="avatar-text">A</span>
           </div>
-          {showUserMenu && (
-            <div style={{
-              position: 'absolute',
-              top: '100%',
-              right: 0,
-              marginTop: '8px',
-              background: '#fff',
-              border: '1px solid var(--border)',
-              borderRadius: '8px',
-              boxShadow: 'var(--shadow-lg)',
-              minWidth: '150px',
-              zIndex: 1000,
-              overflow: 'hidden'
-            }}>
-              <NavLink
-                to="/about"
-                style={{
-                  display: 'block',
-                  padding: '12px 16px',
-                  fontSize: '14px',
-                  color: 'var(--text-primary)',
-                  textDecoration: 'none',
-                  borderBottom: '1px solid var(--border-light)'
-                }}
-              >
-                关于
-              </NavLink>
-              <div style={{
-                padding: '12px 16px',
-                fontSize: '14px',
-                color: 'var(--text-secondary)',
-                cursor: 'pointer'
-              }}>
-                退出登录
-              </div>
+          <div className="user-menu">
+            <NavLink
+              to="/about"
+              className="user-menu-item"
+            >
+              关于
+            </NavLink>
+            <div className="user-menu-item">
+              退出登录
             </div>
-          )}
+          </div>
         </div>
       </div>
     </header>

@@ -1,5 +1,5 @@
 import { NavLink, useLocation } from 'react-router-dom'
-import { IconChart, IconKey, IconFileText, IconImage, IconWallet, IconUser, IconGrid, IconBook, IconInfo, IconFilter, IconLog, IconMonitor, IconTicket, IconSettings, IconChannel, IconModel, IconDeploy, IconUsers, IconChat, IconEmbed, IconChevronLeft, IconChevronRight } from '../icons'
+import { IconChart, IconKey, IconFileText, IconImage, IconWallet, IconUser, IconGrid, IconBook, IconInfo, IconFilter, IconLog, IconMonitor, IconTicket, IconSettings, IconChannel, IconModel, IconDeploy, IconUsers, IconChat, IconEmbed, IconCollapseLeft, IconCollapseRight } from '../icons'
 import './Sidebar.css'
 
 // Define menus for each section
@@ -81,7 +81,7 @@ export function Sidebar({ collapsed, onToggle }) {
         ))}
       </ul>
       <div className="sidebar-toggle" onClick={onToggle}>
-        {collapsed ? <IconChevronRight /> : <IconChevronLeft />}
+        {collapsed ? <IconCollapseRight /> : <IconCollapseLeft />}
       </div>
     </aside>
   )

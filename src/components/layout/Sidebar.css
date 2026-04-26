@@ -112,7 +112,3 @@
   height: 14px;
   transition: transform 0.2s;
 }
-
-.sidebar.collapsed .sidebar-toggle svg {
-  transform: rotate(180deg);
-}
