@@ -10,8 +10,10 @@ import './SettingsPage.css'
 
 export function SettingsPage() {
   return (
-    <div className="settings-page-tabs">
-      <div className="settings-tab-item">运营设置</div>
+    <div className="page-container">
+      <div className="page-header">
+        <h1 className="page-title">运营设置</h1>
+      </div>
       <GeneralSettings />
       <TopbarSettings />
       <SidebarSettings />

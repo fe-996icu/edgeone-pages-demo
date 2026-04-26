@@ -19,9 +19,8 @@
 }
 
 .topbar-logo svg {
-  width: 40px;
-  height: 40px;
-  color: #1664FF;
+  width: 32px;
+  height: 32px;
 }
 
 .topbar-logo span {
@@ -65,20 +64,20 @@
 }
 
 .user-avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 8px;
-  background: #EBEDEF;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  cursor: pointer;
 }
 
-.avatar-text {
-  font-size: 14px;
-  font-weight: 500;
-  color: #242424;
+.user-avatar svg {
+  width: 20px;
+  height: 20px;
+  color: #fff;
 }
 
 .user-menu-wrapper {

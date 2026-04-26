@@ -1,4 +1,5 @@
 import { SettingsCard } from '../../components/settings'
+import './Docs.css'
 
 const docs = [
   { category: '快速开始', items: [
@@ -26,29 +27,23 @@ const docs = [
 
 export function DocsPage() {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-      <div className="settings-tab-item" style={{ fontSize: '20px', fontWeight: '700', padding: 0, border: 'none' }}>文档概览</div>
+    <div className="page-container">
+      <div className="page-header">
+        <h1 className="page-title">文档概览</h1>
+      </div>
 
       <SettingsCard>
-        <div style={{ padding: '12px 0', fontSize: '14px', color: 'var(--text-secondary)' }}>
-          完整的API文档和开发指南，帮助您快速集成和使用系统
-        </div>
+        <div className="page-desc">完整的API文档和开发指南，帮助您快速集成和使用系统</div>
       </SettingsCard>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '24px' }}>
+      <div className="docs-grid">
         {docs.map((section) => (
-          <SettingsCard key={section.category}>
-            <div style={{ fontSize: '16px', fontWeight: '600', color: 'var(--text-primary)', marginBottom: '16px', paddingBottom: '12px', borderBottom: '1px solid var(--border)' }}>
-              {section.category}
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+          <SettingsCard key={section.category} title={section.category} className="doc-card">
+            <div className="doc-list">
               {section.items.map((item) => (
-                <div key={item.title} style={{ cursor: 'pointer', padding: '8px 12px', borderRadius: '6px', transition: 'background 0.2s' }}
-                  onMouseEnter={(e) => e.currentTarget.style.background = 'var(--bg-hover)'}
-                  onMouseLeave={(e) => e.currentTarget.style.background = 'transparent'}
-                >
-                  <div style={{ fontSize: '14px', fontWeight: '500', color: 'var(--primary)' }}>{item.title}</div>
-                  <div style={{ fontSize: '12px', color: 'var(--text-muted)', marginTop: '2px' }}>{item.desc}</div>
+                <div key={item.title} className="doc-item">
+                  <div className="doc-title">{item.title}</div>
+                  <div className="doc-desc">{item.desc}</div>
                 </div>
               ))}
             </div>

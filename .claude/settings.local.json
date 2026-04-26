@@ -20,7 +20,8 @@
       "mcp__chrome-devtools__list_pages",
       "mcp__chrome-devtools__wait_for",
       "mcp__context7__resolve-library-id",
-      "mcp__context7__query-docs"
+      "mcp__context7__query-docs",
+      "mcp__chrome-devtools__list_console_messages"
     ]
   }
 }

@@ -16,7 +16,7 @@
 
 .main-content.no-sidebar {
   margin-left: 0;
-  padding-top: 84px;
+  padding: 84px 48px 48px;
 }
 
 .settings-content {

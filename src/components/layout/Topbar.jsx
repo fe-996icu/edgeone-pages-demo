@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import { IconDashboard } from '../icons'
+import { IconLogo, IconUser } from '../icons'
 import './Topbar.css'
 
 const navItems = [
@@ -14,8 +14,8 @@ export function Topbar() {
   return (
     <header className="topbar">
       <div className="topbar-logo">
-        <IconDashboard />
-        <span>New API</span>
+        <IconLogo />
+        <span>EdgeAPI</span>
       </div>
       <nav className="topbar-nav">
         {navItems.map((item) => (
@@ -31,8 +31,8 @@ export function Topbar() {
       </nav>
       <div className="topbar-user">
         <div className="user-menu-wrapper">
-          <div className="user-avatar" style={{ cursor: 'pointer' }}>
-            <span className="avatar-text">A</span>
+          <div className="user-avatar">
+            <IconUser />
           </div>
           <div className="user-menu">
             <NavLink

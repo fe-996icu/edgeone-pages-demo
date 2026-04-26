@@ -1,0 +1,89 @@
+.page-desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.models-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.model-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.model-card .model-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.model-card .model-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.model-card .model-provider {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.model-card .model-status {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.model-card .model-status.online {
+  background: rgba(34, 197, 94, 0.1);
+  color: #22c55e;
+}
+
+.model-card .model-status.maintenance {
+  background: rgba(255, 152, 0, 0.1);
+  color: #ff9800;
+}
+
+.model-card .model-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.model-card .model-price {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.model-card .price-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.model-card .price-unit {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.model-card .model-btn {
+  padding: 8px 16px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.model-card .model-btn:hover {
+  background: var(--primary-hover);
+}

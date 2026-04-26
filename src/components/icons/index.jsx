@@ -5,6 +5,21 @@ export const IconHome = () => (
   </svg>
 )
 
+export const IconLogo = () => (
+  <svg viewBox="0 0 40 40" fill="none">
+    <defs>
+      <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#1664FF"/>
+        <stop offset="100%" stopColor="#5B8DEF"/>
+      </linearGradient>
+    </defs>
+    <rect x="2" y="2" width="36" height="36" rx="8" fill="url(#logoGradient)"/>
+    <path d="M12 12h6c2.5 0 4 1.5 4 4s-1.5 4-4 4h-3v6h-3V12z" fill="white"/>
+    <path d="M22 16h6v3h-6v-3z" fill="white"/>
+    <path d="M22 22h6v3h-6v-3z" fill="white"/>
+  </svg>
+)
+
 export const IconDashboard = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
     <rect x="3" y="3" width="7" height="7"/>
@@ -196,6 +211,27 @@ export const IconEmbed = () => (
 export const IconChat = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
     <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+  </svg>
+)
+
+export const IconZap = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+  </svg>
+)
+
+export const IconShield = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+  </svg>
+)
+
+export const IconRocket = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
+    <path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>
+    <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/>
+    <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
   </svg>
 )
 

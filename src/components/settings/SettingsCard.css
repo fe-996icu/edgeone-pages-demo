@@ -5,7 +5,8 @@
 }
 
 .settings-card-header {
-  padding: 0;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-light);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -14,11 +15,15 @@
 .settings-card-title {
   font-size: 16px;
   font-weight: 600;
-  color: #242424;
+  color: var(--text-primary);
 }
 
 .settings-card-body {
-  padding: 0;
+  padding: 20px;
+}
+
+.settings-card:has(.settings-card-header) .settings-card-body {
+  padding-top: 16px;
 }
 
 .settings-actions {
