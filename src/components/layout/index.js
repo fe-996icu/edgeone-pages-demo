@@ -1,3 +1,5 @@
 export { Topbar } from './Topbar'
 export { Sidebar } from './Sidebar'
 export { Layout } from './Layout'
+export { DashboardLayout } from './DashboardLayout'
+export { AdminLayout } from './AdminLayout'

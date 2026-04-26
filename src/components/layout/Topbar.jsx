@@ -1,16 +1,19 @@
+import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { IconDashboard } from '../icons'
 import './Topbar.css'
 
 const navItems = [
-  { to: '/', label: '首页' },
-  { to: '/dashboard', label: '控制台' },
-  { to: '/model-square', label: '模型广场' },
-  { to: '/docs', label: '文档' },
-  { to: '/about', label: '关于' },
+  { to: '/', label: '首页', end: true },
+  { to: '/dashboard', label: '控制台', end: false },
+  { to: '/model-square', label: '模型广场', end: false },
+  { to: '/docs', label: '文档', end: false },
+  { to: '/settings', label: '系统设置', end: false },
 ]
 
 export function Topbar() {
+  const [showUserMenu, setShowUserMenu] = useState(false)
+
   return (
     <header className="topbar">
       <div className="topbar-logo">
@@ -23,15 +26,58 @@ export function Topbar() {
             key={item.to}
             to={item.to}
             className={({ isActive }) => isActive ? 'active' : ''}
-            end={item.to === '/'}
+            end={item.end}
           >
             {item.label}
           </NavLink>
         ))}
       </nav>
       <div className="topbar-user">
-        <div className="user-avatar">
-          <span className="avatar-text">A</span>
+        <div
+          style={{ position: 'relative' }}
+          onMouseEnter={() => setShowUserMenu(true)}
+          onMouseLeave={() => setShowUserMenu(false)}
+        >
+          <div className="user-avatar" style={{ cursor: 'pointer' }}>
+            <span className="avatar-text">A</span>
+          </div>
+          {showUserMenu && (
+            <div style={{
+              position: 'absolute',
+              top: '100%',
+              right: 0,
+              marginTop: '8px',
+              background: '#fff',
+              border: '1px solid var(--border)',
+              borderRadius: '8px',
+              boxShadow: 'var(--shadow-lg)',
+              minWidth: '150px',
+              zIndex: 1000,
+              overflow: 'hidden'
+            }}>
+              <NavLink
+                to="/about"
+                style={{
+                  display: 'block',
+                  padding: '12px 16px',
+                  fontSize: '14px',
+                  color: 'var(--text-primary)',
+                  textDecoration: 'none',
+                  borderBottom: '1px solid var(--border-light)'
+                }}
+              >
+                关于
+              </NavLink>
+              <div style={{
+                padding: '12px 16px',
+                fontSize: '14px',
+                color: 'var(--text-secondary)',
+                cursor: 'pointer'
+              }}>
+                退出登录
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </header>

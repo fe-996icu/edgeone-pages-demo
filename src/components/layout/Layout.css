@@ -1,15 +1,22 @@
 .settings-page {
   display: flex;
-  min-height: 100vh;
+  height: 100vh;
   background: #F0F5FE;
+  overflow: hidden;
 }
 
 .main-content {
   flex: 1;
   margin-left: 200px;
   padding: 84px 48px 48px;
-  min-height: 100vh;
+  height: 100vh;
   overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.main-content.no-sidebar {
+  margin-left: 0;
+  padding-top: 84px;
 }
 
 .settings-content {
