@@ -1,0 +1,68 @@
+.topbar {
+  height: 60px;
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.topbar-logo {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.topbar-logo svg {
+  width: 24px;
+  height: 24px;
+  color: var(--primary);
+}
+
+.topbar-nav {
+  display: flex;
+  gap: 24px;
+  margin-left: 32px;
+}
+
+.topbar-nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 14px;
+  padding: 8px 0;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+
+.topbar-nav a:hover,
+.topbar-nav a.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+.topbar-user {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.topbar-user .avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}

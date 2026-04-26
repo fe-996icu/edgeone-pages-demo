@@ -1,0 +1,17 @@
+.settings-textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 14px;
+  color: var(--text-primary);
+  background: var(--bg-card);
+  resize: vertical;
+  font-family: inherit;
+}
+
+.settings-textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}

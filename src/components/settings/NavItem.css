@@ -1,0 +1,26 @@
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-item:last-child {
+  border-bottom: none;
+}
+
+.nav-item-content {
+  flex: 1;
+}
+
+.nav-item-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.nav-item-desc {
+  font-size: 12px;
+  color: var(--text-muted);
+}

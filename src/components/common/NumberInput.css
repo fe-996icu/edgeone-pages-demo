@@ -1,0 +1,39 @@
+.number-input {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--bg-card);
+}
+
+.number-input-value {
+  flex: 1;
+  padding: 0 12px;
+  height: 32px;
+  border: none;
+  text-align: center;
+  font-size: 14px;
+}
+
+.number-input-value:focus {
+  outline: none;
+}
+
+.number-input-btn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-hover);
+  border: none;
+  cursor: pointer;
+  color: var(--text-secondary);
+  font-size: 16px;
+}
+
+.number-input-btn:hover {
+  background: var(--border);
+  color: var(--text-primary);
+}

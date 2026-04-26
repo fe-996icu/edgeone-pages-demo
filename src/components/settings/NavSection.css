@@ -1,0 +1,26 @@
+.nav-section {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.nav-section-header {
+  padding: 12px 16px;
+  background: var(--bg-hover);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-section-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.nav-section-items {
+  padding: 8px 0;
+}
