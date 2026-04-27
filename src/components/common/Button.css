@@ -30,3 +30,20 @@
 .btn-secondary:hover {
   background: var(--bg-hover);
 }
+
+/* 响应式样式 */
+@media (max-width: 768px) {
+  .btn {
+    height: 40px;
+    padding: 0 20px;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .btn {
+    height: 36px;
+    padding: 0 18px;
+    font-size: 14px;
+  }
+}

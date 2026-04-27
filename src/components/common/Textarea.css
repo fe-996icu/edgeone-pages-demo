@@ -9,9 +9,27 @@
   background: var(--bg-card);
   resize: vertical;
   font-family: inherit;
+  box-sizing: border-box;
 }
 
 .settings-textarea:focus {
   outline: none;
   border-color: var(--primary);
+}
+
+/* 响应式样式 */
+@media (max-width: 768px) {
+  .settings-textarea {
+    min-height: 140px;
+    padding: 14px 16px;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .settings-textarea {
+    min-height: 130px;
+    padding: 12px 14px;
+    font-size: 14px;
+  }
 }
